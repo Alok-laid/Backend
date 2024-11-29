@@ -47,10 +47,12 @@ app.post("/", function (req, res) {
 
 app.put("/", function (req, res) {
   //updates the condition of the kidney.
-  for (let i = 0; i < users[0].length; i++) {
+  for (let i = 0; i < users[0].kidneys.length; i++) {
     users[0].kidneys.healthy = true;
   }
-  res.json({});
+  res.json({
+    msg: "All Kidneys Updated.
+  });
 });
 
 app.delete("/", function (req, res) {});
